@@ -1,0 +1,21 @@
+Project project_name {
+  database_type: 'MySQL'
+  Note: 'tech_blog backend for homework'
+}
+
+
+Table users {
+  id integer [pk, not null, increment, unique]
+  username varchar [not null, unique]
+  email varchar [not null, unique]
+  password varchar [not null]
+  created_at timestamp [default: `now()`]
+}
+
+Table posts {
+  id integer [pk, not null, increment, unique]
+  title varchar
+  body text [note: 'Content of the post']
+  user_id integer [ref: > users.id] //many-to-one
+  created_at timestamp [default: `now()`]
+}
