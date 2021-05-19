@@ -1,0 +1,30 @@
+{
+  "name": "tech-blog",
+  "version": "1.0.0",
+  "description": "How About That? A Tech-Blog for the Easily Impressed",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node -r dotenv/config server.js dotenv_config_path=./config.env"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrenniusXIV/tech-blog.git"
+  },
+  "keywords": [
+    "tech-blog"
+  ],
+  "author": "Brent B.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BrenniusXIV/tech-blog/issues"
+  },
+  "homepage": "https://github.com/BrenniusXIV/tech-blog#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
+    "express-session": "^1.17.2",
+    "path": "^0.12.7",
+    "sequelize": "^6.6.2"
+  }
+}
