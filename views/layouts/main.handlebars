@@ -16,6 +16,15 @@
                 <h1>How About That?</h1>
                 <h2>A tech blog for the easily impressed</h2>
             </header>
+            <nav>
+                <p>Home</p>
+                {{#if logged_in}}
+                <p>Logout</p>
+                <p>Profile</p>
+                {{else}}
+                <p>Login</p>
+                {{/if}}
+            </nav>
             <main>
                 {{{ body }}}
             </main>
