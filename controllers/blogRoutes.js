@@ -26,7 +26,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get('/post/:id', (req, res) => {
+router.get('/post/:id', async (req, res) => {
   try {
     const postData = await Post.findByPk(
       req.params.id, {
@@ -67,7 +67,7 @@ router.get('/profile', authenticateUser, async (req, res) => {
   }
 })
 
-router.get('/', async (req, res) => {
+router.get('/login', async (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/profile');
     return;

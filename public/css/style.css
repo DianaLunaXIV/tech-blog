@@ -50,3 +50,16 @@ body {
     padding: 10px;
     justify-self: center;
 }
+
+.login-page > form {
+    display: flex;
+    flex-flow: column wrap;
+    width: 500px;
+    align-items: center;
+    border: 2px solid blue;
+    border-radius: 15px;
+    background-color: var(--preview-background);
+}
+.login-page > form div {
+    margin-bottom: 20px;
+}
