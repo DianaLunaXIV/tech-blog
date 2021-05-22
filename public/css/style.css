@@ -14,7 +14,9 @@ body {
     margin: 25px;
     border: 3px solid black;
     border-radius: 5px;
+    color: white;
     background-color: aqua;
+    background-image: radial-gradient(aqua, blue);
 }
 
 .main {
