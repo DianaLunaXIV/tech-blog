@@ -1,0 +1,47 @@
+:root {
+    --preview-background: rgba(0, 139, 255, 0.5)
+}
+
+body {
+    background-image: url(../images/space.jpg);
+}
+
+.top {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: 25px;
+    border: 3px solid black;
+    border-radius: 5px;
+    background-color: aqua;
+}
+
+.main {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+}
+
+.post-preview {
+    display: flex;
+    width: 600px;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 5px;
+    background-color: var(--preview-background);
+}
+
+.post-preview > .post-meta {
+    flex: 2 1 500px;
+    border: 2px solid blue;
+}
+
+.post-meta > p {
+    margin-left: 2px;
+    margin-right: 2px;
+    border: 0.5px solid aqua;
+    justify-self: center;
+}

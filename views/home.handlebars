@@ -1,7 +1,9 @@
 {{#each posts as |post|}}
-<div>
-    <h3>{{post.title}}</h3>
-    <h4>{{post.user.name}}</h4>
-    <p>{{post.body}}</p>
+<div class="post-preview">
+    <div class="post-meta">
+        <h3>{{post.title}}</h3>
+        <h4>Posted by: {{post.user.name}}</h4>
+        <p>{{post.body}}</p>
+    </div>
 </div>
 {{/each}}

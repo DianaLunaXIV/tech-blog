@@ -12,20 +12,20 @@
 
     <body>
         <div>
-            <header>
+            <header class="top">
                 <h1>How About That?</h1>
                 <h2>A tech blog for the easily impressed</h2>
             </header>
-            <nav>
-                <p>Home</p>
+            <nav class="top">
+                <a href="/">Home</a>
                 {{#if logged_in}}
-                <p>Logout</p>
-                <p>Profile</p>
+                <a href="/profile">Profile</a>
+                <a href="/logout">Logout</a>
                 {{else}}
-                <p>Login</p>
+                <a href="/login">Login</a>
                 {{/if}}
             </nav>
-            <main>
+            <main class="main">
                 {{{ body }}}
             </main>
         </div>
