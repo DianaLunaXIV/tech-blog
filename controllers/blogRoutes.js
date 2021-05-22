@@ -49,6 +49,15 @@ router.get('/post/:id', async (req, res) => {
   }
 });
 
+router.get('/create-post', authenticateUser, async (req, res) => {
+  try {
+    res.render('create');
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
+
+
 router.get('/profile', authenticateUser, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_ud, {
