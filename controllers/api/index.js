@@ -3,7 +3,7 @@ const userRoutes = require("./userRoutes");
 const blogPostRoutes = require("./blogPostRoutes");
 
 //api routes go here
-router.use("/", async (req, res) => {
+router.get("/", async (req, res) => {
   res.json({ message: "You hit route: /api/." });
 });
 

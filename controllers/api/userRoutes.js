@@ -1,9 +1,18 @@
 const router = require("express").Router();
 const { User } = require("../../models");
 
-// router.use("/", async (req, res) => {
-//   res.json({ message: "You hit route: /api/users." });
-// });
+router.get("/", async(req, res) => {
+  try {
+    const usersData = await User.findAll();
+    if (!usersData) {
+      res.status(404).json({message: "No users data found"})
+    } else {
+      res.status(200).json(usersData);
+    }
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
 
 router.post("/", async (req, res) => {
   try {
@@ -41,16 +50,17 @@ router.post("/login", async (req, res) => {
         .status(400)
         .json({ message: "Incorrect e-mail or password. Please try again." });
       return;
+    } else {
+
+      req.session.save(() => {
+        req.session.user_id = userData.id;
+        req.session.logged_in = true;
+
+        res
+          .status(200)
+          .json({ user: userData, message: "You've successfully logged in!" });
+      });
     }
-
-    req.session.save(() => {
-      req.session.user_id = userData.id;
-      req.session.logged_in = true;
-
-      res
-        .status(200)
-        .json({ user: userData, message: "You've successfully logged in!" });
-    });
   } catch (err) {
     res.status(400).json(err);
   }
