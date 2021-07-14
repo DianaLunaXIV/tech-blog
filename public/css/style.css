@@ -42,6 +42,11 @@ body {
     justify-content: space-around;
 }
 
+.post-meta a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
 .post-meta > p {
     margin-left: 2px;
     margin-right: 2px;
