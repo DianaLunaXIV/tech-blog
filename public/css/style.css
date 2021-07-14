@@ -63,3 +63,43 @@ body {
 .login-page > form div {
     margin-bottom: 20px;
 }
+
+.post-form {
+    display: flex;
+    width: 650px;
+    flex-flow: column;
+    justify-content: space-around;
+    margin: 5px;
+    border-radius: 10px;
+    border: 3px solid aqua;
+    text-align: center;
+    background-color: var(--preview-background);
+}
+
+#post-content {
+    resize: none;
+    width: 420px;
+    height: 120px;
+}
+
+#post-title {
+    width: 420px;
+}
+
+
+.post-form div {
+    align-self: center;
+}
+
+.create-post-btn {
+    align-self: center;
+    width: 420px;
+}
+
+#msg {
+    color: blue;
+    font-weight: bolder;
+    font-size: larger;
+    font-display: inherit;
+    font-style: italic;
+}

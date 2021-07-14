@@ -29,4 +29,4 @@ const createPost = async (ev) => {
   }
 };
 
-document.getElementById("btn").addEventListener("click", createPost);
+document.querySelector('.create-post-btn').addEventListener("click", createPost);
