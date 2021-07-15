@@ -31,13 +31,16 @@ router.get("/", async (req, res) => {
   
   router.post("/", async (req, res) => {
     try {
+      if (req.session.user_id) {
         const commentResults = await Comment.create({
           ...req.body,
           user_id: req.session.user_id,
         });
   
         res.status(200).json(commentResults);
-      
+      } else {
+        res.status(404).json({message: "You must be logged in to post comments."})
+      }
     } catch (err) {
       console.log(err);
       res.status(500).json(err);

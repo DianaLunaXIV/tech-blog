@@ -55,7 +55,48 @@ body {
     padding: 10px;
     justify-self: center;
 }
+.post-display {
+    display: flex;
+    width: 700px;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    margin: 5px;
+    padding: 5px;
+    background-color: var(--preview-background);
+    border: 2px solid blue;
+    border-radius: 15px;
+}
 
+.post-body, .comment-body {
+    padding-left: 3px;
+    border-top: 0.5px dashed aqua;
+}
+
+.post-comments-container {
+    display: flex;
+    width: 500px;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    margin: 5px;
+    padding-left: 5px;
+    background-color: var(--preview-background);
+    border: 2px solid blue;
+    border-radius: 15px;
+}
+
+.create-comment-container {
+    display: flex;
+    width: 500px;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    margin: 5px;
+    background-color: var(--preview-background);
+    border: 2px solid blue;
+    border-radius: 15px;
+}
+.create-comment-container > * {
+    padding: 10px;
+}
 .login-page > form {
     display: flex;
     flex-flow: column wrap;
@@ -99,6 +140,16 @@ body {
 .create-post-btn {
     align-self: center;
     width: 420px;
+}
+
+.create-comment-btn {
+    align-self: center;
+    width: 480px;
+}
+#comment-content {
+    resize: none;
+    width: 475px;
+    height: 60px;
 }
 
 #msg {

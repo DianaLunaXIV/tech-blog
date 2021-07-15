@@ -1,6 +1,6 @@
 async function postData(data)
 {
-    let fetchResult = await fetch('/api/comment', {
+    let fetchResult = await fetch('/api/comments', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -31,8 +31,8 @@ const createComment = async (ev)=>{
         pre.textContent = "Comment created!";
         document.location.reload();
     } else {
-        pre.textContent = "Comment creation failed. Make sure you're logged in!"
+        pre.textContent = "Comment creation failed.\nMake sure you're logged in!"
     }
     
 }
-document.getElementById('btn').addEventListener('click', createComment);
+document.querySelector('.create-comment-btn').addEventListener('click', createComment);
