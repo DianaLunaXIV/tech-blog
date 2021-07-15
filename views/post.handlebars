@@ -1,0 +1,32 @@
+<div class="post-display">
+    <div class="post-header">
+        <h3>{{post.title}}</h3>
+        <h5>Posted by: {{post.user.name}}</h5>
+        <h5>at {{post.date_created}}</h5>
+    </div>
+    <div class="post-body">
+        <p>{{post.body}}</p>
+    </div>
+</div>
+<div class="post-comments-container">
+    {{#each comments as |comment|}}
+    <div class="comment-username">
+        <h3>{{user.name}} replied:</h3>
+    </div>
+    <div class="comment-body">
+        <p>{{comment.body}}</p>
+    </div>
+    {{/each}}
+</div>
+<div class="create-comment-container">
+    <form class="create-comment">
+        <div class="create-comment-body">
+            <textarea type="text" id="comment-content" name="comment-content" placeholder="Comment on this post here:"></textarea></br>
+            <button class="create-comment-btn">Create comment</button>
+        <div id="msg">
+          <pre></pre>
+        </div>
+        </div>
+    </form>
+</div>
+<script src="/js/createComment.js"></script>

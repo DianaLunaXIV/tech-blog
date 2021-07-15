@@ -1,0 +1,17 @@
+[
+    {
+      "name": "Jacen Solo",
+      "email": "jacen1@njo.org",
+      "password": "ihearttenelka35"
+    },
+    {
+        "name": "Luke Skywalker",
+        "email": "grandmaster@njo.org",
+        "password": "WatchMeFly19"
+    },
+    {
+        "name": "Leia Organa-Solo",
+        "email": "princess@njo.org",
+        "password": "alderaanLives000"
+    }
+]

@@ -1,0 +1,171 @@
+:root {
+    --preview-background: rgba(0, 139, 255, 0.5)
+}
+
+body {
+    background-image: url(../images/space.jpg);
+}
+
+.top {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: 25px;
+    border: 3px solid black;
+    border-radius: 10px;
+    color: white;
+    background-color: aqua;
+    background-image: radial-gradient(aqua, blue);
+}
+
+.main {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+}
+
+.post-preview {
+    display: flex;
+    width: 600px;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 5px;
+    background-color: var(--preview-background);
+    border: 2px solid blue;
+    border-radius: 15px;
+}
+
+.post-preview > .post-meta {
+    justify-content: space-around;
+}
+
+.post-meta a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.post-meta > p {
+    margin-left: 2px;
+    margin-right: 2px;
+    border: 0.5px solid aqua;
+    border-radius: 15px;
+    padding: 10px;
+    justify-self: center;
+}
+.post-display {
+    display: flex;
+    width: 700px;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    margin: 5px;
+    padding: 5px;
+    background-color: var(--preview-background);
+    border: 2px solid blue;
+    border-radius: 15px;
+}
+
+.post-body, .comment-body {
+    padding-left: 3px;
+    border-top: 0.5px dashed aqua;
+}
+
+.post-comments-container {
+    display: flex;
+    width: 500px;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    margin: 5px;
+    padding-left: 5px;
+    background-color: var(--preview-background);
+    border: 2px solid blue;
+    border-radius: 15px;
+}
+
+.create-comment-container {
+    display: flex;
+    width: 500px;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    margin: 5px;
+    background-color: var(--preview-background);
+    border: 2px solid blue;
+    border-radius: 15px;
+}
+.create-comment-container > * {
+    padding: 10px;
+}
+.login-page > form {
+    display: flex;
+    flex-flow: column wrap;
+    width: 500px;
+    align-items: center;
+    border: 2px solid blue;
+    border-radius: 15px;
+    background-color: var(--preview-background);
+}
+.login-page > form div {
+    margin-bottom: 20px;
+}
+
+.post-form {
+    display: flex;
+    width: 650px;
+    flex-flow: column;
+    justify-content: space-around;
+    margin: 5px;
+    border-radius: 10px;
+    border: 3px solid aqua;
+    text-align: center;
+    background-color: var(--preview-background);
+}
+
+#post-content {
+    resize: none;
+    width: 420px;
+    height: 120px;
+}
+
+#post-title {
+    width: 420px;
+}
+
+
+.post-form div {
+    align-self: center;
+}
+
+.create-post-btn {
+    align-self: center;
+    width: 420px;
+}
+
+.create-comment-btn {
+    align-self: center;
+    width: 480px;
+}
+#comment-content {
+    resize: none;
+    width: 475px;
+    height: 60px;
+}
+
+#msg {
+    color: blue;
+    font-weight: bolder;
+    font-size: larger;
+    font-display: inherit;
+    font-style: italic;
+}
+
+.no-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color:blue;
+    text-decoration: none;
+    font-size: 100%;
+}
