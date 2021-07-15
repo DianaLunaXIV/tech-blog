@@ -1,0 +1,17 @@
+[
+    {
+      "body": "Wow! Cool post.",
+      "user_id": 1,
+      "post_id": 1
+    },
+    {
+        "body": "Sorry about that.",
+        "user_id": 3,
+        "post_id": 2
+    },
+    {
+        "body": "meh",
+        "user_id": 2,
+        "post_id": 3
+    }
+]
