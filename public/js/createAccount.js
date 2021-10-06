@@ -1,5 +1,4 @@
-async function postUserData(data)
-{
+async function postUserData(data) {
     let fetchResult = await fetch('/api/users', {
         method: 'POST',
         headers: {
@@ -23,11 +22,12 @@ async function onCreateUser(event) {
     let createResults = await postUserData(userData);
 
     if (createResults.ok) {
-        alert(`User created for ${userData.email}. Welcome, ${userData.name}! Please login.`)
+        alert(`User created for ${userData.email}. Welcome, ${userData.name}!`)
+        return
     } else {
         alert(`Failed to create user data.`)
         return;
     }
 }
 
-document.querySelector('.create-account-button').addEventListener('submit', onCreateUser);
+document.querySelector('.create-account-button').addEventListener('click', onCreateUser);
