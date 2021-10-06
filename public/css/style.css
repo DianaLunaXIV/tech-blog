@@ -169,3 +169,23 @@ body {
     text-decoration: none;
     font-size: 100%;
 }
+
+.profile-management {
+    display: flex;
+    width: 600px;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    margin: 5px;
+    padding-left: 5px;
+    background-color: var(--preview-background);
+    border: 2px solid blue;
+    border-radius: 15px;
+}
+
+.profile-manage-form {
+    display: flex;
+    flex-flow: column wrap;
+    /*width: 600px;*/
+    align-items: center;
+    margin: 15px;
+}
