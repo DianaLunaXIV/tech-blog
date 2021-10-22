@@ -66,6 +66,46 @@ router.post("/login", async (req, res) => {
   }
 });
 
+router.put('/', async (req, res) => {
+  if (req.session.logged_in) {
+    try {
+      const userData = await User.findOne({
+        where: {
+          id: req.session.user_id,
+        }
+      })
+
+      const validPassword = await userData.checkPassword(req.body.currentPassword)
+
+      if (!validPassword) {
+        res
+            .status(400)
+            .json({ message: "Incorrect e-mail or password. Please try again." });
+        return;
+      } else {
+        try {
+          const updatedUserData = await User.update({password: req.body.confirmPassword}, {
+            where: {
+              id: req.session.user_id,
+            },
+            individualHooks: true,
+          })
+          res.status(200).json(updatedUserData)
+        } catch(err) {
+          res.status(500).json({"error": err})
+        }
+      }
+
+    } catch(err){
+      res.status(500).json({"error": err})
+    }
+
+  } else {
+    res.status(400).json({"message": "How'd you get here?"})
+  }
+})
+
+
 router.delete('/logout', async (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {

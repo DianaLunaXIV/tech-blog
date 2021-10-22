@@ -16,7 +16,7 @@ async function onUpdateUser(event) {
 
     let userData = {
         "currentPassword": document.getElementById("profile-password-current").value.trim(),
-        "newPassword:": document.getElementById("profile-password-change").value.trim(),
+        "newPassword": document.getElementById("profile-password-change").value.trim(),
         "confirmPassword": document.getElementById("profile-password-confirm").value.trim()
     }
 
