@@ -1,3 +1,4 @@
+{{#if posts}}
 {{#each posts as |post|}}
 <div class="post-preview">
     <div class="post-meta">
@@ -7,3 +8,10 @@
     </div>
 </div>
 {{/each}}
+{{else}}
+<div class="post-preview">
+    <div class="post-meta">
+        <h3>No posts to show.</h3>
+    </div>
+</div>
+{{/if}}
